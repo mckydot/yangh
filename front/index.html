@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>게시판</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="board-container">
+    <div class="board-header">
+      <h1 class="board-title">자유게시판</h1>
+      <a href="#write" class="btn btn-primary">글쓰기</a>
+    </div>
+
+    <div class="board-toolbar">
+      <div class="board-count">총 <strong>128</strong>건</div>
+      <form class="search-form" onsubmit="event.preventDefault();">
+        <select class="search-select" aria-label="검색 조건">
+          <option value="title">제목</option>
+          <option value="content">내용</option>
+          <option value="author">작성자</option>
+        </select>
+        <input type="text" class="search-input" placeholder="검색어 입력" />
+        <button type="submit" class="btn">검색</button>
+      </form>
+    </div>
+
+    <div class="table-wrap">
+      <table class="board-table">
+        <thead>
+          <tr>
+            <th style="width: 70px;">번호</th>
+            <th class="col-title">제목</th>
+            <th style="width: 110px;">작성자</th>
+            <th style="width: 110px;" class="col-hide-mobile">작성일</th>
+            <th style="width: 80px;" class="col-hide-mobile">조회</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="notice">
+            <td><span class="badge-notice">공지</span></td>
+            <td class="col-title">
+              <a href="#post-1" class="post-link">게시판 이용 규칙 및 공지사항 안내</a>
+              <span class="reply-count">[12]</span>
+            </td>
+            <td>관리자</td>
+            <td class="col-hide-mobile">2026.11.01</td>
+            <td class="col-hide-mobile">1,540</td>
+          </tr>
+          <tr>
+            <td>128</td>
+            <td class="col-title">
+              <a href="#post-2" class="post-link">HTML/CSS 반응형 레이아웃 질문드립니다</a>
+              <span class="reply-count">[4]</span>
+            </td>
+            <td>홍길동</td>
+            <td class="col-hide-mobile">2026.11.21</td>
+            <td class="col-hide-mobile">38</td>
+          </tr>
+          <tr>
+            <td>127</td>
+            <td class="col-title">
+              <a href="#post-3" class="post-link">오늘 점심 메뉴 추천 받아요</a>
+              <span class="reply-count">[9]</span>
+            </td>
+            <td>김철수</td>
+            <td class="col-hide-mobile">2026.11.20</td>
+            <td class="col-hide-mobile">112</td>
+          </tr>
+          <tr>
+            <td>126</td>
+            <td class="col-title">
+              <a href="#post-4" class="post-link">개발 환경 세팅 후기 공유</a>
+            </td>
+            <td>이영희</td>
+            <td class="col-hide-mobile">2026.11.19</td>
+            <td class="col-hide-mobile">205</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="pagination" aria-label="페이지 이동">
+      <a href="#prev" class="page-link">&lt;</a>
+      <a href="#page-1" class="page-link active">1</a>
+      <a href="#page-2" class="page-link">2</a>
+      <a href="#page-3" class="page-link">3</a>
+      <a href="#page-4" class="page-link">4</a>
+      <a href="#page-5" class="page-link">5</a>
+      <a href="#next" class="page-link">&gt;</a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      padding: 40px 16px;
+    }
+
+    .board-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .board-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .board-title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      border: 1px solid #d0d7de;
+      background-color: #ffffff;
+      color: #212529;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn:hover {
+      background-color: #f1f3f5;
+    }
+
+    .btn-primary {
+      background-color: #2563eb;
+      border-color: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+    }
+
+    .board-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .board-count {
+      font-size: 14px;
+      color: #6c757d;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 6px;
+    }
+
+    .search-select,
+    .search-input {
+      padding: 7px 10px;
+      font-size: 14px;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      background-color: #ffffff;
+    }
+
+    .search-input {
+      width: 200px;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table.board-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .board-table thead th {
+      background-color: #f1f3f5;
+      color: #495057;
+      font-weight: 600;
+      padding: 12px 10px;
+      border-top: 2px solid #343a40;
+      border-bottom: 1px solid #dee2e6;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .board-table tbody td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #e9ecef;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .board-table tbody tr:hover {
+      background-color: #f8f9fa;
+    }
+
+    .board-table tbody tr.notice {
+      background-color: #fff9db;
+    }
+
+    .board-table tbody tr.notice:hover {
+      background-color: #fff3bf;
+    }
+
+    .col-title {
+      text-align: left !important;
+    }
+
+    .post-link {
+      color: #212529;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .post-link:hover {
+      text-decoration: underline;
+      color: #2563eb;
+    }
+
+    .badge-notice {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #b45309;
+      background-color: #fef3c7;
+      border-radius: 4px;
+    }
+
+    .reply-count {
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 4px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+    }
+
+    .page-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 34px;
+      height: 34px;
+      padding: 0 8px;
+      font-size: 14px;
+      color: #495057;
+      text-decoration: none;
+      border: 1px solid #dee2e6;
+      border-radius: 6px;
+    }
+
+    .page-link:hover {
+      background-color: #f1f3f5;
+    }
+
+    .page-link.active {
+      background-color: #2563eb;
+      border-color: #2563eb;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .board-container {
+        padding: 18px;
+      }
+
+      .search-input {
+        width: 140px;
+      }
+
+      .col-hide-mobile {
+        display: none;
+      }
+    }
