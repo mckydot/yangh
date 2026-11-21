@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 app = FastAPI()
 
+from fastapi.responses import FileResponse
+
 @app.get("/")
 def naming() :
-    return "hello"
+    return "hello world"
 
  ##   5. FastAPI로 공부한다면 추천하는 학습 순서
 ##내가 추천하는 순서는 다음과 같아.
